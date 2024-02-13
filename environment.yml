@@ -1,0 +1,11 @@
+name: wavelet_tutorial
+dependencies:
+  - python>=3.9,<3.12
+  - jupyterlab
+  - ipykernel
+  - numpy
+  - pywavelets
+  - pandas
+  - pip
+  - pip:
+    - matplotlib
