@@ -2,10 +2,13 @@ name: wavelet_tutorial
 dependencies:
   - python>=3.9,<3.12
   - jupyterlab
+  - jupyter-dash 
   - ipykernel
+  - ipywidgets
+  - scipy
   - numpy
   - pywavelets
   - pandas
   - pip
   - pip:
-    - matplotlib
+      - plotly>=5.18.0 
