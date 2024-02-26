@@ -12,7 +12,7 @@ begin
 
   timeo = fspan(1871.25,1996.,N)
   x&time = timeo
-  print (x)
+  ;print (x)
 
   mother = 0             ; Morlet wavelet
   param  = 6.0           ; common for Morlet
@@ -30,6 +30,7 @@ begin
   w      = wavelet (x,mother,dt,param,s0,dj,jtot,npad, \
                      noise,isigtest,siglvl,nadof)
 
+  print (w)
                          ; create coordinate arrays for plot
   power            = onedtond( w@power, (/jtot,N/) )
   power!0          = "period"                        ; Y axis
