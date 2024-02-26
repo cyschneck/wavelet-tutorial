@@ -2,7 +2,7 @@
 Running NCL within conda
 
 ## Conda
-Create [new conda environment](https://www.ncl.ucar.edu/Download/conda.shtml
+Create [new conda environment](https://www.ncl.ucar.edu/Download/conda.shtml)
 
 ```
 conda create -n ncl_stable -c conda-forge ncl
