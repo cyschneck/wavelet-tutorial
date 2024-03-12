@@ -12,3 +12,4 @@ dependencies:
   - pip:
       - ipywidgets
       - matplotlib
+      - cmaps
