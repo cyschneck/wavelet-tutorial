@@ -20,7 +20,7 @@ begin
   s0     = 0.25
   dj     = 0.25          ; 4 sub-octaves per octave
   jtot   = 44            ; =subScale*11
-  npad   = 1024          ; pad with extra zeros
+  npad   = N             ; pad with extra zeros, most commonly, npad = N [i.e. no padding]
   nadof  = new( 2,float) ; ignored
 
   noise  = 1             ; test vs red noise

@@ -4,12 +4,11 @@ dependencies:
   - jupyterlab
   - jupyter-dash 
   - ipykernel
-  - ipywidgets
   - scipy
   - numpy
   - pywavelets
   - pandas
   - pip
   - pip:
-      - plotly>=5.18.0 
+      - ipywidgets
       - matplotlib
