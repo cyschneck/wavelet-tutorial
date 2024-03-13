@@ -14,9 +14,15 @@ Activate new environment
 source activate ncl_stable
 ```
 
-Run script within ncl directory
+Run power spectrum within ncl directory
 
 ```
-ncl wavelet_WORKING.ncl
+ncl wavelet_POWER.ncl
+```
+
+Run phase spectrum within ncl directory
+
+```
+ncl wavelet_PHASE.ncl
 ```
 

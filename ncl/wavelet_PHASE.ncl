@@ -30,27 +30,27 @@ begin
   w      = wavelet (x,mother,dt,param,s0,dj,jtot,npad, \
                      noise,isigtest,siglvl,nadof)
 
-  print (w)
+  print (w@phase)
                          ; create coordinate arrays for plot
-  power            = onedtond( w@power, (/jtot,N/) )
-  power!0          = "period"                        ; Y axis
-  power&period     = w@period
-  power!1          = "time"                          ; X axis
-  power&time       = x&time
-  power@long_name  = "Power Spectrum"
-  power@units      = "C^2"
+  phase            = onedtond( w@phase, (/jtot,N/) )
+  phase!0          = "period"                        ; Y axis
+  phase&period     = w@period
+  phase!1          = "time"                          ; X axis
+  phase&time       = x&time
+  phase@long_name  = "Phase Spectrum"
+  phase@units      = "Angle"
 
                          ; compute significance ( >= 1 is significant)
-  SIG  = power           ; transfer metadata
-  SIG  = power/conform (power,w@signif,0)
+  SIG  = phase           ; transfer metadata
+  SIG  = phase/conform (phase,w@signif,0)
 
-  wks = gsn_open_wks("png","ncl_output")
+  wks = gsn_open_wks("png","ncl_phase_output")
                          ; PLOT (only up to periods of 64)
-                         ; power
+                         ; phase
   res                     = True
   res@cnFillOn            = True
   res@trYReverse          = True
-  plot = gsn_csm_contour(wks,power({0:64},:),res)  
+  plot = gsn_csm_contour(wks,phase({0:64},:),res)  
 
                          ; significance
   RES = True
